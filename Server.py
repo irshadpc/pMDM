@@ -17,7 +17,7 @@ from Creds import *
 ###########################################################################
 # Update this to match the UUID in the test provisioning profiles, in order
 #   to demonstrate removal of the profile
-my_test_provisioning_uuid = 'REPLACE-ME-WITH-REAL-UUIDSTRING'
+my_test_provisioning_uuid = '32a81c84c0eefc138dee6e58b687ab882ec1df0c'
 ###########################################################################
 last_result = ''
 last_sent = ''
@@ -230,14 +230,14 @@ my_UnlockToken = %s
 
     print out
     
-    fd = open('creds.py', 'w')
+    fd = open('Creds.py', 'w')
     fd.write(out)
     fd.close()
     print "Device enrolled!\n"
     return dict()
 
 mdm_commands = setup_commands()
-current_command = mdm_commands['DeviceLock']
+# current_command = mdm_commands['DeviceLock']
 
 if __name__ == "__main__":
     app = web.application(urls, globals())
